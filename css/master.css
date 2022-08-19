@@ -1,0 +1,497 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    outline: none;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+:root{
+    --back: white;
+    --back-h1: linear-gradient(rgb(150, 0, 0),rgb(255, 143, 143));
+    --back-h2: linear-gradient(rgb(56, 56, 56), rgb(141, 141, 141));
+    --back-content: gainsboro;
+    --border: 1px solid rgb(56, 56, 56);
+    
+    font-family: sans-serif;
+}
+.cont{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(56, 56, 56);
+    position: fixed;
+    overflow: scroll;
+}
+#box-logo{
+    width: 100%;
+    height: 100px;
+    background: var(--back-h1);
+    margin-top: 30px;
+}
+#box-header{
+    display: grid;
+    justify-items: center;
+    width: 80%;
+    min-width: 700px;
+    height: 300px;
+    background: var(--back);
+    margin: 10px auto;
+}
+#menu{
+    width: 98%;
+    height: 30px;
+    background: var(--back-h2);
+    display: flex;
+    justify-content: center;
+    gap: 10px; 
+}
+#menu img{
+    width: 15px;
+    height: 15px;
+    object-fit: cover;
+
+}
+.menu-text{
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.menu-text:hover{
+    border-bottom: 1.5px solid white;
+    margin-bottom: 10px;
+    text-shadow: 0px 0px 7px;
+}
+.box-hello{
+    width: 98%;
+    height: 40px;
+    background: var(--back-content);
+    border: var(--border);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;   
+}
+#hello{
+    margin-left: 10px;
+    padding-right: 10px;
+    border-right: 3px solid rgb(199, 199, 199)
+}
+.adv{
+    width: 98%;
+    height: 200px;
+    background: var(--back-content);
+    border: var(--border);
+    font-size: 3rem;
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+.forum{
+    display: grid;
+    justify-items: center;
+    width: 80%;
+    min-width: 700px;
+    background: var(--back);
+    margin: -10px auto;
+    gap: 10px;
+}
+.pb{
+    display: flex;
+    align-items: center;
+    gap: 55vw;
+}
+.page{
+    font-size: .9rem; 
+}
+.forum input[type="button"]{
+    background: rgb(184, 1, 1);
+    color: white;
+    width: 150px;
+    margin-right: 0;
+}
+.forum input[type="button"]:hover{
+    cursor: pointer;
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 0px rgb(122, 32, 32);
+
+}
+.forum input[type="button"]:active{
+    transform: translateY(-1px);
+    box-shadow: 0px 3px 0px  rgb(122, 32, 32);
+}
+.forum-info{
+    width: 98%;
+    border: var(--border);
+}
+.forum-h1{
+    background: var(--back-h1);
+    width: 100%;
+    height: 30px;
+    border-bottom: var(--border);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-left: 10px;
+    color: white;
+    text-shadow: 0 0 5px black;
+}
+.forum-h1 img{
+    width: 13px;
+    height: 13px;
+    object-fit: cover;
+}
+.forum-h2{
+    width: 100%;
+    height: 20px;
+    background: var(--back-h2);
+    display: grid;
+    grid-template-columns: 50% 10% 10% 30%;
+    align-items: center;
+    font-size: 0.7rem;
+    color: white;
+    text-shadow: 0 0 5px black;
+}
+.forum-content{
+    display: grid;
+    grid-template-columns: 5% 45% 10% 10% 30%;
+    align-items: center;
+    background: var(--back-content);
+    margin-top: 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.forum-content img{
+    width: 27px;
+    height: 27px;
+    margin: 0 auto;
+}
+.forum-top a{
+    color: brown;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.forum-top a:hover{
+    text-shadow: 0 0 10px brown;
+}
+.forum-topic a{
+    font-size: .8rem;
+}
+.total-top, .total-msg{
+    text-align: center;
+    font-size: 0.8rem;
+}
+.forum-des, .last-msg{
+    font-size: 0.8rem;
+}
+.box-footer{
+    width: 80%;
+    min-width: 700px;
+    background: var(--back);
+    margin: 0 auto;
+    padding-top: 20px;
+}
+.stat{
+    width: 98%;
+    margin: 0 auto;
+    border: var(--border);
+    background: var(--back-content);
+}
+.stat-text{
+    height: 100px;
+    font-size: 0.8rem;
+    line-height: 23px;
+    display: grid;
+    grid-template-columns: 5% 50% 45%;
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+}
+.stat-text img{
+    width: 27px;
+    height: 27px;
+    object-fit: cover;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    margin: 0 auto;
+}
+#stat-users{
+    text-align: end;
+    margin-right: 10px;
+}
+#stat-online{
+    grid-row: 2/3;
+    grid-column: 2/4;
+    border-top: 1px solid rgb(192, 192, 192);
+    margin-right: 10px;
+    padding-top: 7px;
+    margin-top: -10px;
+}
+.box-footer{
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+.line{
+    width: 98%;
+    height: 3px;
+    background: black;
+    margin: 10px auto;
+}
+.foo{
+    width: 98%;
+    height: 100px;
+    margin: 10px auto;
+    background: var(--back-h1);
+    color: white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 0 30px 0 30px;
+    font-size: 0.9rem;
+    text-shadow: 0 0 10px black;
+    line-height: 25px;
+    border: var(--border);
+}
+
+/* //////////////Регистрация////////////////////////////////////////////////////////////////////////////////////////*/
+
+#modalBackSignup{
+    background:#00000066;
+    position:fixed;
+    top:0;
+    left:0;
+    height:100vh;
+    width:100%;
+    display:none;
+    align-content:center;
+    justify-content:center;
+    opacity:0%;
+    transition:1s;
+    backdrop-filter:blur(2px);
+    color: white;
+}
+#modalSignup{
+    width: 400px;
+    height: 300px;
+    background: var(--back-h1);
+    display: grid; 
+    justify-items: center;  
+    align-items: center; 
+    border-radius: 15px;
+    transform: scale(0) rotate(0);
+    transition: 1.5s;
+    box-shadow: 0 0 30px black;
+}
+#modalSignup input{
+    width: 300px;
+    height: 30px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: none;
+    padding-left: 10px;
+    background: gainsboro;
+}
+#modalSignup input:hover{
+    background: white;
+    box-shadow: 0 0 7px white;
+}
+#modalSignup input[type="submit"]{
+    background: rgb(184, 1, 1);
+    color: white;
+    width: 150px;
+    margin-left: 25%;
+    padding-left: 0px;
+}
+#modalSignup input[type="submit"]:hover{
+    cursor: pointer;
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 0px rgb(122, 32, 32);
+
+}
+#modalSignup input[type="submit"]:active{
+    transform: translateY(-1px);
+    box-shadow: 0px 3px 0px  rgb(122, 32, 32);
+}
+
+/* ////////////Авторизация///////////////////////////////////////////////////////////////////////////////////// */
+
+#modalBackLogin{
+    background:#00000066;
+    position:fixed;
+    top:0;
+    left:0;
+    height:100vh;
+    width:100%;
+    display:none;
+    align-content:center;
+    justify-content:center;
+    opacity:0%;
+    transition:1s;
+    backdrop-filter:blur(2px);
+    color: white;
+}
+#modalLogin{
+    width: 400px;
+    height: 250px;
+    background: var(--back-h1);
+    display: grid; 
+    justify-items: center;  
+    align-items: center; 
+    border-radius: 15px;
+    transform: scale(0) rotate(0);
+    transition: 1.5s;
+    box-shadow: 0 0 30px black;
+}
+#modalLogin input{
+    width: 300px;
+    height: 30px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: none;
+    padding-left: 10px;
+    background: gainsboro;
+}
+#modalLogin input:hover{
+    background: white;
+    box-shadow: 0 0 7px white;
+}
+#modalLogin input[type="submit"]{
+    background: rgb(184, 1, 1);
+    color: white;
+    width: 150px;
+    margin-left: 25%;
+    padding-left: 0px;
+}
+#modalLogin input[type="submit"]:hover{
+    cursor: pointer;
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 0px rgb(122, 32, 32);
+
+}
+#modalLogin input[type="submit"]:active{
+    transform: translateY(-1px);
+    box-shadow: 0px 3px 0px  rgb(122, 32, 32);
+}
+.close{
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    cursor: pointer;
+    margin-left: 350px;
+    margin-top: 10px;
+    box-shadow: 0 0 3px white;
+    font-size: 1.6rem;
+}
+.close:hover{
+    box-shadow: 0 0 15px white;
+}
+
+/* /////////////////////Message.php/////////////////////////////////////////////////////////////////// */
+
+.cont-message{
+    display: grid;
+    background: var(--back-content);
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 1fr 50px;
+    font-size: .8rem;
+    padding: 10px;
+}
+.edit{
+    grid-column: 2/3;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+}
+.text-edit{
+    cursor: pointer;
+    color: brown;
+}
+.text-edit:hover{
+    color: gray;
+}
+.user{
+    color: brown;
+    font-size: 1rem;
+    text-shadow: 0 0 5px brown;
+}
+.profile img{
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    margin: 10px 0 10px 0;
+}
+.answer{
+    background: var(--back-content);
+    padding: 10px;
+}
+.answer textarea{
+    width: 700px;
+    height: 200px;
+    margin: 10px 10px 10px 0px;
+    border: var(--border);
+    padding: 10px;
+}
+.answer input[type="submit"],[type="button"]{
+    background: rgb(184, 1, 1);
+    color: white;
+    width: 150px;
+    height: 30px; 
+    border-radius: 10px;
+    border: none;
+    margin-right: 20px;
+}
+.answer input[type="submit"]:hover{
+    background: rgb(184, 1, 1);
+    cursor: pointer;
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 0px rgb(122, 32, 32);
+}
+.answer input[type="submit"]:active{
+    transform: translateY(-1px);
+    box-shadow: 0px 3px 0px  rgb(122, 32, 32);
+}
+.answer input[type="button"]:hover{
+    background: rgb(184, 1, 1);
+    cursor: pointer;
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 0px rgb(122, 32, 32);
+}
+.answer input[type="button"]:active{
+    transform: translateY(-1px);
+    box-shadow: 0px 3px 0px  rgb(122, 32, 32);
+}
+#smile{
+    width: 100%;
+    border: var(--border);
+    background: white;
+    margin: 10px 0 0 0;
+    padding: 10px;
+}
+#smile img:hover{
+    cursor: pointer;
+    box-shadow: 0 0 5px red;
+}
+
+/* /////////////////new_theme.php//////////////////////////////////////////////////////////////////////////// */
+
+.cont_new_theme{
+    background: var(--back-content);
+    display: grid;
+    padding: 10px;
+}
+.create_theme{
+    gap: 30px;
+}
+.create_theme input, textarea{
+    margin: 10px 0 10px 0;
+}
+
+
+
