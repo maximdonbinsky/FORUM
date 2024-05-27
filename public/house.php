@@ -9,7 +9,7 @@ require_once "$path/classes/ButtonAddTheme.php";
 
 
 if (empty($_GET['page'])) {
-    header("Location: workshop.php?page=1");
+    header("Location: house.php?page=1");
 }
 
 ?>
@@ -33,16 +33,16 @@ if (empty($_GET['page'])) {
                         <div>Сообщение темы</div>
                     </div>
                     <?
-                    $topicForum = new TopicForum('workshop','msgWorkshop','comments_workshop');
+                    $topicForum = new TopicForum('house','msgHouse','comments_house');
                     $topicForum->topicForum();
                     ?>
                 </div>
                 <div class="pb">
                     <?
-                    $pagTheme = new PaginationTheme('workshop','workshop');
+                    $pagTheme = new PaginationTheme('house','house');
                     $pagTheme->pagTheme();
         
-                    $button = new ButtonAddTheme('addThemeWorkshop');
+                    $button = new ButtonAddTheme('addThemeHouse');
                     $button->buttonAddTheme();
                     ?>          
                 </div>
@@ -51,7 +51,7 @@ if (empty($_GET['page'])) {
        <? include "$path/private/footer.php"?>
     </div>
     <script>
-        const views = new Views('workshop');
+        const views = new Views('house');
         views.addViews();
     </script>  
 </body>
